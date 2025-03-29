@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+body{
+    @apply bg-blue-300 text-gray-600;
+    
+    font-family: monospace;
+} 
+h1{
+    @apply text-3xl font-bold text-blue-300;
+}
+h2{
+    @apply text-xl font-bold my-4;
+}
+h3{
+    @apply text-lg font-bold my-4;
+}
+ul {
+    @apply my-10;
+}
+p{
+    @apply my-2;
+}
+
+header {
+    @apply bg-blue-900;
+     
+    nav {
+        @apply flex items-center gap-5 max-w-screen-lg px-10 py-5 mx-auto;
+    }
+    h1{
+        @apply mr-auto;
+    }
+    a{
+        @apply hover:bg-red-300 rounded px-2 py-2 text-blue-400 hover:text-white;
+        
+    }
+    button{
+        @apply text-white cursor-pointer;
+    }
+    span{
+        @apply text-white;
+    }
+}
+
+form {
+    @apply max-w-screen-sm;
+}
+input,select,textarea {
+    @apply block w-full mt-2 mb-4 p-2;
+}
+
+.container {
+    @apply max-w-screen-lg mx-auto px-12 py-8;
+}
+.card {
+    @apply bg-white rounded-lg border border-gray-200 px-40 py-2 my-10 flex
+    justify-between items-center hover:bg-yellow-500;
+}
+.highlight {
+  @apply border-l-4 border-l-yellow-500 border-r-4 border-r-yellow-500;
+}
+
+.btn{
+    @apply rounded-lg px-4 py-2 bg-gray-200 hover:bg-red-300 hover:text-white;
+}
+input,textarea,select {
+    @apply bg-gray-200;
+}
